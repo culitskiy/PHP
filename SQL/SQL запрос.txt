@@ -1,0 +1,2 @@
+SELECT author FROM (library.relation INNER JOIN library.authors ON authors.id = relation.authors_id) 
+INNER JOIN library.books ON books.id=relation.books_id GROUP BY author HAVING COUNT(books.book)<7
